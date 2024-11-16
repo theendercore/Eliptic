@@ -2,6 +2,7 @@ package com.theendercore.eliptic;
 
 import com.theendercore.eliptic.init.ELPConfig;
 import com.theendercore.eliptic.init.ELPItems;
+import com.theendercore.eliptic.init.ELPLootInjection;
 import com.theendercore.eliptic.init.ELPStatusEffects;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -23,6 +24,7 @@ public class Eliptic implements ModInitializer {
     public void onInitialize() {
         ModLoadingContext.registerConfig(MOD_ID, ModConfig.Type.COMMON, ELPConfig.SPEC);
         ELPItems.init();
+        ELPLootInjection.init();
         ELPStatusEffects.init();
     }
 }

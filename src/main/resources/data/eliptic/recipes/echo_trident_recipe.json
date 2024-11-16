@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " ab",
+    " ca",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "eliptic:echo_core_fragment"
+    },
+    "b": {
+      "item": "eliptic:echo_core"
+    },
+    "c": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "result": {
+    "item": "eliptic:echotrident",
+    "count": 1
+  }
+}

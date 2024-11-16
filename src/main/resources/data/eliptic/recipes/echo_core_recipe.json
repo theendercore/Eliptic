@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:echo_shard"
+    },
+    "b": {
+      "item": "eliptic:echo_core_fragment"
+    },
+    "c": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "eliptic:echo_core",
+    "count": 1
+  }
+}
