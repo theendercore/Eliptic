@@ -1,0 +1,7 @@
+{
+  "parent": "eliptic:custom/echo_trident",
+  "textures": {
+    "0": "eliptic:block/echotexture",
+    "particle": "eliptic:item/echotexture"
+  }
+}
