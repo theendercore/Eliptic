@@ -1,8 +1,12 @@
 package com.theendercore.eliptic;
 
+import com.theendercore.eliptic.init.ELPConfig;
 import com.theendercore.eliptic.init.ELPItems;
+import com.theendercore.eliptic.init.ELPStatusEffects;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
+import net.minecraftforge.api.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +21,8 @@ public class Eliptic implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModLoadingContext.registerConfig(MOD_ID, ModConfig.Type.COMMON, ELPConfig.SPEC);
         ELPItems.init();
+        ELPStatusEffects.init();
     }
 }
