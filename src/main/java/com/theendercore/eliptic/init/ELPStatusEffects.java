@@ -7,7 +7,7 @@ import net.minecraft.util.registry.Registry;
 import static com.theendercore.eliptic.Eliptic.id;
 
 public class ELPStatusEffects {
-    public static final StatusEffect ECHO_TRIDENT = register("echo_trident", new EchoStatusEffect());
+    public static final StatusEffect ECHO = register("echo", new EchoStatusEffect());
 
     public static void init() {
     }

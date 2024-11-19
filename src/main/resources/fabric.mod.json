@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"com.theendercore.eliptic.ElipticClient"
+		],
+		"cardinal-components": [
+			"com.theendercore.eliptic.init.ELPData"
 		]
 	},
 	"mixins": [

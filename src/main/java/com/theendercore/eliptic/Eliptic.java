@@ -1,9 +1,6 @@
 package com.theendercore.eliptic;
 
-import com.theendercore.eliptic.init.ELPConfig;
-import com.theendercore.eliptic.init.ELPItems;
-import com.theendercore.eliptic.init.ELPLootInjection;
-import com.theendercore.eliptic.init.ELPStatusEffects;
+import com.theendercore.eliptic.init.*;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.minecraftforge.api.ModLoadingContext;
