@@ -34,10 +34,11 @@
 	],
 	"accessWidener": "eliptic.accesswidener",
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.19.2",
+		"fabricloader": "*",
+		"minecraft": "*",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"forgeconfigapiport": ">=4.2.11"
 	},
 	"suggests": {
 		"another-mod": "*"
