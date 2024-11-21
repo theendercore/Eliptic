@@ -22,7 +22,7 @@ public class EchoStatusEffect extends StatusEffect {
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity player && ELPData.getTridentUse(player)) {
             player.velocityModified = true;
-            player.setVelocity(new Vec3d(player.getVelocity().getX(), ELPConfig.SINK_SPEED.get(), player.getVelocity().getZ()));
+            player.setVelocity(new Vec3d(player.getVelocity().getX(), Math.max(ELPConfig.SINK_SPEED.get(), player.getVelocity().getY()), player.getVelocity().getZ()));
             player.velocityModified = true;
         }
     }
