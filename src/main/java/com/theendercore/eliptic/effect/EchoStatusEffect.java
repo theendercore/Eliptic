@@ -1,6 +1,7 @@
 package com.theendercore.eliptic.effect;
 
 import com.theendercore.eliptic.init.ELPConfig;
+import com.theendercore.eliptic.init.ELPData;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -19,10 +20,8 @@ public class EchoStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if (entity instanceof PlayerEntity player) {
-////            if (((ElipticModVariables.PlayerVariables) player.getCapability(ElipticModVariables.PLAYER_VARIABLES_CAPABILITY, (Direction) null).orElse(new ElipticModVariables.PlayerVariables())).tridentUse) {
+        if (entity instanceof PlayerEntity player && ELPData.getTridentUse(player)) {
             player.setVelocity(new Vec3d(player.getVelocity().getX(), ELPConfig.SINK_SPEED.get(), player.getVelocity().getZ()));
-//            }
         }
     }
 }

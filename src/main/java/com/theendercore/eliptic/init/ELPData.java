@@ -41,24 +41,51 @@ public class ELPData implements EntityComponentInitializer {
         ELIPTIC_DATA.sync(entity);
     }
 
+    public static void setCooldownReset(Entity entity, boolean val) {
+        var data = ELIPTIC_DATA.get(entity);
+        data.cooldownReset = val;
+        ELIPTIC_DATA.sync(entity);
+    }
 
+    public static boolean getCooldownReset(Entity entity) {
+        return ELIPTIC_DATA.get(entity).cooldownReset;
+    }
+
+    public static void setTridentUse(Entity entity, boolean val) {
+        var data = ELIPTIC_DATA.get(entity);
+        data.tridentUse = val;
+        ELIPTIC_DATA.sync(entity);
+    }
+
+    public static boolean getTridentUse(Entity entity) {
+        return ELIPTIC_DATA.get(entity).tridentUse;
+    }
+
+
+    @SuppressWarnings("UnstableApiUsage")
     public static class ElipticData implements PlayerComponent<ElipticData>, AutoSyncedComponent {
         public ElipticData(Entity entity) {
         }
 
         public boolean echo = false;
         public boolean overlay = false;
+        public boolean cooldownReset = false;
+        public boolean tridentUse = false;
 
         @Override
         public void readFromNbt(NbtCompound nbt) {
             if (nbt.contains("echo")) echo = nbt.getBoolean("echo");
             if (nbt.contains("overlay")) overlay = nbt.getBoolean("overlay");
+            if (nbt.contains("cooldownReset")) cooldownReset = nbt.getBoolean("cooldownReset");
+            if (nbt.contains("tridentUse")) tridentUse = nbt.getBoolean("tridentUse");
         }
 
         @Override
         public void writeToNbt(NbtCompound nbt) {
             nbt.putBoolean("echo", echo);
             nbt.putBoolean("overlay", overlay);
+            nbt.putBoolean("cooldownReset", cooldownReset);
+            nbt.putBoolean("tridentUse", tridentUse);
         }
     }
 }
