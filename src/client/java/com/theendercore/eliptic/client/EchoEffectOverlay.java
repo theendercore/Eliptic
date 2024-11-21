@@ -34,6 +34,7 @@ public class EchoEffectOverlay {
         if (ELPData.getOverlay(player)) {
             DrawableHelper.drawTexture(stack, 0, 0, 0, 0, w, h, w, h);
         }
+        watermark(stack, client);
 
         RenderSystem.depthMask(true);
         RenderSystem.defaultBlendFunc();
@@ -44,4 +45,16 @@ public class EchoEffectOverlay {
 
     public static final Identifier OVERLAY_TEXTURE = new Identifier("eliptic:textures/screens/design_ohne_titel_3.png");
 
+    private static void watermark(MatrixStack matrices, MinecraftClient client) {
+        var txtR = client.textRenderer;
+        var window = client.getWindow();
+        matrices.push();
+        matrices.translate(window.getScaledWidth() / 2.0, window.getScaledHeight() - 64.0, 0.0);
+        var scale = 1.54f;
+        matrices.scale(scale, scale, scale);
+        RenderSystem.enableBlend();
+        DrawableHelper.drawCenteredText(matrices, txtR, "@ko-fi.com/theendercore", 0, 0, (0xFFFFFF | (128 << 24)));
+        RenderSystem.disableBlend();
+        matrices.pop();
+    }
 }
