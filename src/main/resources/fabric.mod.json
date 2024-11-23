@@ -3,13 +3,13 @@
 	"id": "eliptic",
 	"version": "${version}",
 	"name": "Eliptic",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is a commission mode made by TheEnderCore for IntimidatingSpill.",
 	"authors": [
-		"Me!"
+		"TheEnderCore"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://theendercore.com",
+		"sources": "https://github.com/theendercore/Eliptic"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/eliptic/icon.png",

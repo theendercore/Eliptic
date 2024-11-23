@@ -34,7 +34,7 @@ public class EchoEffectOverlay {
         if (ELPData.getOverlay(player)) {
             DrawableHelper.drawTexture(stack, 0, 0, 0, 0, w, h, w, h);
         }
-        watermark(stack, client);
+//        watermark(stack, client);
 
         RenderSystem.depthMask(true);
         RenderSystem.defaultBlendFunc();
